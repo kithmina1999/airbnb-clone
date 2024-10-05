@@ -8,6 +8,7 @@ import useLoginModal from '@/hooks/useLoginModal'
 import { signOut } from 'next-auth/react'
 import { Session } from 'next-auth'
 import { User } from '@prisma/client'
+import useRentModal from '@/hooks/useRentModal'
 
 
 interface UserMenuProps {
@@ -19,6 +20,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ session,currentUser }) => {
     const registerModal = useRegisterModal()
     const loginModal = useLoginModal()
     const [isOpen, setIsOpen] = useState(false);
+    const rentModal = useRentModal()
 
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value)
@@ -28,7 +30,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ session,currentUser }) => {
         if(!currentUser){
            return loginModal.onOpen();
         }
-    },[currentUser,loginModal])
+
+        rentModal.onOpen()
+
+    },[currentUser,loginModal,rentModal])
     return (
         <div className='relative'>
             <div className='flex flex-row items-center gap-3'>
@@ -58,7 +63,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ session,currentUser }) => {
                                 <MenuItem onClick={()=>{}} label='My favorites' />
                                 <MenuItem onClick={()=>{}} label='My Reservations' />
                                 <MenuItem onClick={()=>{}} label='My properties' />
-                                <MenuItem onClick={()=>{}} label='Airbnb my home' />
+                                <MenuItem onClick={rentModal.onOpen} label='Airbnb my home' />
                                 <MenuItem onClick={()=>signOut()} label='Logout' />
                             </>
                         ) : (
