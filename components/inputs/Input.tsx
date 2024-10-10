@@ -1,23 +1,19 @@
 'use client'
 import React from 'react'
-import { FieldErrors, UseFormRegister } from 'react-hook-form'
+import { FieldErrors, UseFormRegister,FieldValues } from 'react-hook-form'
 import { BiDollar } from 'react-icons/bi';
 
-interface LogInFormValues {
-    name?:string
-    email: string;
-    password: string;
-}
+
 
 interface InputProps {
-    id:  keyof LogInFormValues;
+    id:  keyof FieldValues;
     label: string;
     type?: string;
     disabled?: boolean;
     formatPrice?: boolean;
     required: boolean;
-    register: UseFormRegister<LogInFormValues> 
-    errors: FieldErrors<LogInFormValues>;
+    register: UseFormRegister<FieldValues> 
+    errors: FieldErrors<FieldValues>;
 
 }
 

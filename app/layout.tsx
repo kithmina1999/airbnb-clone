@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import  {Nunito} from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 
@@ -11,7 +11,7 @@ import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "@/components/modals/RentModal";
 
 const font = Nunito({
-  subsets:['latin'],
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default async function RootLayout({
 
   const session = await auth()
   const currentUser = await getCurrentUser()
- 
+
   return (
     <html lang="en">
       <body
@@ -37,8 +37,11 @@ export default async function RootLayout({
         <LoginModal />
         <RegisterModal />
         <RentModal />
-        <Navbar session={session} currentUser={currentUser}/>
-        {children}
+        <Navbar session={session} currentUser={currentUser} />
+        <div className="pb-20 pt-28"
+        >
+          {children}
+        </div>
       </body>
     </html>
   );
