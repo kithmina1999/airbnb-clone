@@ -13,77 +13,77 @@ import { IoDiamond } from 'react-icons/io5'
 export const categories =[
     {
         label:'Beach',
-        icon: <TbBeach />,
+        icon: TbBeach ,
         description: 'This property is close to beach!'
     },
     {
         label:'Windmills',
-        icon: <GiWindmill />,
+        icon: GiWindmill ,
         description: 'This property has windmill!'
     },
     {
         label:'Modern',
-        icon: <MdOutlineVilla />,
+        icon: MdOutlineVilla ,
         description: 'This property is modern!'
     },
     {
         label:'Countryside',
-        icon: <TbMountain />,
+        icon: TbMountain,
         description: 'This property is in the countryside!'
     },
     {
         label:'Pools',
-        icon: <TbPool />,
+        icon: TbPool ,
         description: 'This property has a pool!'
     },
     {
         label:'Island',
-        icon: <GiIsland />,
+        icon: GiIsland ,
         description: 'This property is on an island!'
     },
     {
         label:'Lake',
-        icon: <GiBoatFishing />,
+        icon: GiBoatFishing ,
         description: 'This property is close to a lake!'
     },
     {
         label:'Skiing',
-        icon: <FaSkiing />,
+        icon: FaSkiing ,
         description: 'This property has skiing activities!'
     },
     {
         label:'Castles',
-        icon: <GiCastle />,
+        icon: GiCastle ,
         description: 'This property is in a castle!'
     },
     {
         label:'Camping',
-        icon: <GiForestCamp />,
+        icon: GiForestCamp ,
         description: 'This property has camping activities!'
     },
     {
         label:'Arctic',
-        icon: <BsSnow />,
+        icon: BsSnow ,
         description: 'This property is in arctic!'
     },
     {
         label:'Cave',
-        icon: <GiCaveEntrance />,
+        icon: GiCaveEntrance ,
         description: 'This property is in a cave!'
     },
     {
         label:'Desert',
-        icon: <GiCactus />,
+        icon: GiCactus ,
         description: 'This property is in the desert!'
     },
     {
         label:'Barns',
-        icon: <GiBarn />,
+        icon: GiBarn ,
         description: 'This property is in the barns!'
     },
     {
         label:'Lux',
-        icon: <IoDiamond />,
+        icon: IoDiamond ,
         description: 'This property is luxurious!'
     },
 ]

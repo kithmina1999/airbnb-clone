@@ -2,15 +2,16 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useCallback } from 'react'
 import qs from 'query-string'
+import { IconType } from 'react-icons';
 
 interface CategoryBoxProps {
-  icon: JSX.Element
+  icon: IconType
   label: string;
   selected?: boolean
 }
 
 const CategoryBox = ({
-  icon,
+  icon:Icon,
   label,
   selected
 }: CategoryBoxProps) => {
@@ -48,7 +49,7 @@ const CategoryBox = ({
     ${selected ? 'border-b-neutral-800' : 'border-transparent'}
     ${selected ? 'text-neutral-800' : 'text-neutral-500'}
     `}>
-      {icon}
+      <Icon />
       <div className='font-medium text-sm'>
         {label}
       </div>

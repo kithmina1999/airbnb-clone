@@ -4,11 +4,12 @@ import { useRouter } from "next/navigation";
 import useLoginModal from "./useLoginModal";
 import { useCallback, useMemo } from "react";
 import toast from "react-hot-toast";
+import { SafeUser } from "@/types";
 
 
 interface IUseFavoriteProps {
     listingId: string;
-    currentUser?: User | null
+    currentUser?: SafeUser | null
 }
 
 const useFavorite = ({

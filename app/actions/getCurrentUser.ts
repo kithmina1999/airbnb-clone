@@ -19,10 +19,11 @@ async function getCurrentUser() {
         if (!currentUser) {
             return null
         }
+        
         return currentUser
 
     } catch (error) {
-        return toast.error("something went wrong"+error)
+        return toast.error("something went wrong" + error)
     }
 }
 

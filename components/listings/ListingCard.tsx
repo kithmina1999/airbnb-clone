@@ -1,21 +1,22 @@
 'use client'
 import useCountries from '@/hooks/useCountry'
-import { Listing, Reservation, User } from '@prisma/client'
+import { Listing, Reservation } from '@prisma/client'
 import { useRouter } from 'next/navigation'
 import React, { useCallback, useMemo } from 'react'
 import { format } from 'date-fns'
 import Image from 'next/image'
 import HeartButton from '../HeartButton'
 import Button from '../Button'
+import { SafeListing, SafeUser } from '@/types'
 
 interface ListingCardProp {
-    data: Listing
+    data: SafeListing
     reservation?: Reservation
     onAction?: (id: string) => void;
     disabled?: boolean;
     actionLabel?: string;
     actionId?: string;
-    currentUser?: User | null
+    currentUser?: SafeUser | null
 }
 
 const ListingCard = ({
@@ -78,7 +79,7 @@ const ListingCard = ({
                     <div className='absolute top-3 right-3'>
                         <HeartButton 
                             listingId={data.id}
-                            currentUser={currentUser}
+                            currentUser={currentUser || null}
                         />
                     </div>
                 </div>
