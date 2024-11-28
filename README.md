@@ -13,6 +13,7 @@
 - [Additional notes](#additional-notes)
 
 
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
@@ -26,6 +27,9 @@ Before you begin, ensure you have the following:
 - **CPU**: 2+ cores
 - **RAM**: 4GB minimum (8GB recommended)
 - **Disk Space**: 10GB free for Docker images and containers
+
+
+
 
 ## Step 1: Cloning from the Repository
 
@@ -41,6 +45,8 @@ Navigate to the project folder:
 ```bash
 cd worklenz
 ```
+
+
 
 ## Step 2: Prepare Docker Environment
 
@@ -105,6 +111,7 @@ HOSTNAME=localhost
 ```
 
 
+
 ## Step 3: Build and Start Containers
 
 Start your docker engine if it’s haven’t 
@@ -130,11 +137,15 @@ To remove all containers and images **(use with caution)**:
 docker system prune -a
 ```
 
+
+
 ## Step 4: Access the App
 
 Once the containers are running, you can access the Worklenz App through the following:
 - **Backend URL**: http://localhost:3000
 - **FrontEnd URl**:http://localhost:4200
+
+
 
 
 ## Step 5:  Troubleshooting Common Issues
@@ -376,6 +387,9 @@ Check if the containers are running:
 docker ps
 ```
 Ensure your firewall is not blocking access to the relevant ports **(3000 and 4200)**. You can add rules to allow these ports.
+
+
+
 
 ## Additional notes
 
